@@ -48,3 +48,14 @@ else:
     print('no esta')
 print()
 arbol.inorden()
+def inorden_descendente(root):
+    if root is not None:
+        inorden_descendente(root.right) 
+        if root.other_values: 
+            print(root.value)  
+        inorden_descendente(root.left)
+
+print("--------------------")
+print("f.Nombres de superhéroes en orden descendente:")
+inorden_descendente(arbol.root)
+print("--------------------")
